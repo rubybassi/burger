@@ -16,6 +16,11 @@ const burger = {
       callback(res);
     });
   },
+  deleteOne: (id, callback) => {
+    orm.deleteOne([id], (res) => {
+      callback(res);
+    });
+  },
 };
 
 module.exports = burger;

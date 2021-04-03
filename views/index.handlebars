@@ -33,7 +33,9 @@
         <div class="col-sm">
           {{#each burgers}}
           {{#if this.devoured}}
-          <div class="p-3 border bg-light">{{this.burger_name}}</div>
+          <div class="p-3 border bg-light">{{this.burger_name}}
+            <button class="btn btn-danger burger--delete-btn" type="submit" id={{this.id}}>Delete <i class="fas fa-trash-alt"></i></button>
+          </div>
           {{/if}}
           {{/each}}
         </div>

@@ -39,3 +39,8 @@ h2 {
 .burger-search {
   margin-top: 50px;
 }
+
+.burger--delete-btn {
+  color: white !important;
+  float: right;
+}

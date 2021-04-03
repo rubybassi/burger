@@ -5,7 +5,6 @@ $('#submit-burger-btn').on('click', (event) => {
     console.log('no message'); 
     return;
     } 
-    console.log('button sumbitted', burger);
     const data = {
       burger_name: burger,
     };
@@ -27,9 +26,24 @@ $('#submit-burger-btn').on('click', (event) => {
 $('.burger-btn').on('click', (event) => {
   event.preventDefault();
   const id = event.target.id;
-  console.log('id', id);
   $.ajax({
     type: 'PUT',
+    url: `/${id}`,
+    success: function (response) {
+      console.log(response.message);
+      location.reload();
+    },
+    error: function (err) {
+      console.log(`Error ${err}`);
+    },
+  });
+});
+
+$('.burger--delete-btn').on('click', (event) => {
+  event.preventDefault();
+  const id = event.target.id;
+  $.ajax({
+    type: 'DELETE',
     url: `/${id}`,
     success: function (response) {
       console.log(response.message);

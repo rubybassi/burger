@@ -24,6 +24,14 @@ const orm = {
       callback(results);
     });
   },
+
+  deleteOne: (id, callback) => {
+    const queryString = "DELETE FROM burgers WHERE id = ?";
+    connection.query(queryString, [id], (err, results) => {
+      if (err) throw err;
+      callback(results);
+    });
+  },
 };
 
 module.exports = orm;

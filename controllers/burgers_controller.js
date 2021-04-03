@@ -21,4 +21,10 @@ router.put("/:id", (req, res) => {
   });
 });
 
+router.delete("/:id", (req, res) => {
+  burger.deleteOne(req.params.id, () => {
+    res.status(200).json({ success: true, message: "burger deleted!" });
+  });
+});
+
 module.exports = router;
