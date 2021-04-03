@@ -1,0 +1,25 @@
+{
+  "name": "burger-bite",
+  "version": "1.0.0",
+  "description": "burger app utlising MySql, Node, Express and Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubybassi/burger-bite.git"
+  },
+  "author": "Sandy Bassi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rubybassi/burger-bite/issues"
+  },
+  "homepage": "https://github.com/rubybassi/burger-bite#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "mysql": "^2.18.1"
+  }
+}
