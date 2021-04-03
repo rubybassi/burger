@@ -1,15 +1,12 @@
 <div class="bg">
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col burger-header">
-        <h1>Burger Bite</h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-
+  <section class="container-fluid">
+    <header class="row">
+      <article class="col burger-header">
+        <h1><i class="fas fa-hamburger"></i> Burger Bite</h1>
+      </article>
+    </header>
+  </section>
+  <main class="container">
     <div class="row">
       <div class="input-group col-sm burger-search">
         <input type="text" id="burger-name" class="form-control" placeholder="Enter Burger Name to Eat"
@@ -17,10 +14,8 @@
         <button class="btn  btn-warning" id="submit-burger-btn" type="button" id="button-addon2">Add Burger</button>
       </div>
     </div>
-
     <div class="row gx-5">
-
-      <div class="col-sm burger-list">
+      <section class="col-sm burger-list">
         <div class="p-3"></div>
         <div class="col-sm">
           {{#each burgers }}
@@ -32,9 +27,8 @@
           {{/unless}}
           {{/each}}
         </div>
-      </div>
-
-      <div class="col-sm" id="devoured-list">
+      </section>
+      <section class="col-sm" id="devoured-list">
         <div class="p-3"></div>
         <div class="col-sm">
           {{#each burgers}}
@@ -43,10 +37,7 @@
           {{/if}}
           {{/each}}
         </div>
-      </div>
-
+      </section>
     </div>
-
-  </div>
-
+  </main>
 </div>
