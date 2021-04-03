@@ -18,7 +18,6 @@ App Summary:
 - [Contributing](#Contributing)
 - [License](#License)
 - [Environment](#Environment)
-- [Questions](#Questions)
 
 ## Preview
 
