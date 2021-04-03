@@ -12,9 +12,9 @@
 
     <div class="row">
       <div class="input-group col-sm burger-search">
-        <input type="text" class="form-control" placeholder="Enter Burger Name to Eat" aria-label="Burger name"
-          aria-describedby="button-addon2">
-        <button class="btn  btn-warning" type="button" id="button-addon2">Add Burger</button>
+        <input type="text" id="burger-name" class="form-control" placeholder="Enter Burger Name to Eat"
+          aria-label="Burger name" aria-describedby="button-addon2">
+        <button class="btn  btn-warning" id="submit-burger-btn" type="button" id="button-addon2">Add Burger</button>
       </div>
     </div>
 
@@ -23,21 +23,25 @@
       <div class="col-sm burger-list">
         <div class="p-3"></div>
         <div class="col-sm">
-           {{#each burgers }}
-          <div class="p-3 border bg-light" id={{this.id}}>
-           {{this.burger_name}}
-            <button class="btn burger-btn">Devour <i class="fas fa-hamburger"></i></button>
+          {{#each burgers }}
+          {{#unless this.devoured}}
+          <div class="p-3 border bg-light">
+            {{this.burger_name}}
+            <button class="btn burger-btn" type="submit" id={{this.id}}>Devour <i class="fas fa-hamburger"></i></button>
           </div>
-           {{/each}}
+          {{/unless}}
+          {{/each}}
         </div>
       </div>
 
       <div class="col-sm" id="devoured-list">
         <div class="p-3"></div>
         <div class="col-sm">
-          <div class="p-3 border bg-light">Texas</div>
-          <div class="p-3 border bg-light">Hot Chili</div>
-          <div class="p-3 border bg-light">Spicy</div>
+          {{#each burgers}}
+          {{#if this.devoured}}
+          <div class="p-3 border bg-light">{{this.burger_name}}</div>
+          {{/if}}
+          {{/each}}
         </div>
       </div>
 
