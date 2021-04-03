@@ -1,0 +1,35 @@
+.bg {
+  background-image: url("../img/burgers.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  padding: 30 0px;
+}
+
+.burger-header {
+  padding: 0;
+}
+h1 {
+  color: black;
+  text-align: center;
+  padding: 30px;
+  background-color: #ffc107;
+}
+
+h2 {
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.burger-btn {
+  background-color: #20c997 !important ;
+  color: white !important;
+  float: right;
+}
+
+.burger-search {
+  margin-top: 50px;
+}
